@@ -1,0 +1,30 @@
+INFO _internal.py: 113  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py: 113 127.0.0.1 - - [17/Aug/2020 00:37:37] "[33mGET / HTTP/1.1[0m" 404 -
+INFO _internal.py: 113 127.0.0.1 - - [17/Aug/2020 00:37:37] "[33mGET / HTTP/1.1[0m" 404 -
+ERROR app.py: 1891 Exception on /user/ [GET]
+Traceback (most recent call last):
+  File "C:\Users\Leemamas\Desktop\python_project\venv\flask_venv\lib\site-packages\flask\app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Leemamas\Desktop\python_project\venv\flask_venv\lib\site-packages\flask\app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Leemamas\Desktop\python_project\venv\flask_venv\lib\site-packages\flask\app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\Leemamas\Desktop\python_project\venv\flask_venv\lib\site-packages\flask\_compat.py", line 39, in reraise
+    raise value
+  File "C:\Users\Leemamas\Desktop\python_project\venv\flask_venv\lib\site-packages\flask\app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Leemamas\Desktop\python_project\venv\flask_venv\lib\site-packages\flask\app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Leemamas\Desktop\python_project\mysite\mysite\user\views.py", line 11, in index
+    current_app.logging.debug('debug msg')
+  File "C:\Users\Leemamas\Desktop\python_project\venv\flask_venv\lib\site-packages\werkzeug\local.py", line 347, in __getattr__
+    return getattr(self._get_current_object(), name)
+AttributeError: 'Flask' object has no attribute 'logging'
+INFO _internal.py: 113 127.0.0.1 - - [17/Aug/2020 00:37:42] "[35m[1mGET /user/ HTTP/1.1[0m" 500 -
+INFO _internal.py: 113  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+INFO _internal.py: 113 127.0.0.1 - - [17/Aug/2020 00:39:24] "[37mGET /user/ HTTP/1.1[0m" 200 -
+INFO _internal.py: 113  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+DEBUG views.py: 11 debug msg
+INFO _internal.py: 113 127.0.0.1 - - [17/Aug/2020 00:40:53] "[37mGET /user/ HTTP/1.1[0m" 200 -
+DEBUG views.py: 11 debug msg
+INFO _internal.py: 113 127.0.0.1 - - [17/Aug/2020 00:41:23] "[37mGET /user/ HTTP/1.1[0m" 200 -
